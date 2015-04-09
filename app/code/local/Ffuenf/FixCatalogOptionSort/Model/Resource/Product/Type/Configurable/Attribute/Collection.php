@@ -20,10 +20,10 @@ class Ffuenf_FixCatalogOptionSort_Model_Resource_Product_Type_Configurable_Attri
 {
 
     /**
-    * Load attribute prices information
-    *
-    * @return Mage_Catalog_Model_Resource_Product_Type_Configurable_Attribute_Collection
-    */
+     * Load attribute prices information
+     *
+     * @return Mage_Catalog_Model_Resource_Product_Type_Configurable_Attribute_Collection
+     */
     protected function _loadPrices()
     {
         if ($this->count()) {
@@ -34,7 +34,7 @@ class Ffuenf_FixCatalogOptionSort_Model_Resource_Product_Type_Configurable_Attri
             if ($this->getHelper()->isPriceGlobal()) {
                 $websiteId = 0;
             } else {
-                $websiteId = (int)Mage::app()->getStore($this->getStoreId())->getWebsiteId();
+                $websiteId = (int) Mage::app()->getStore($this->getStoreId())->getWebsiteId();
                 $pricing[$websiteId] = array();
             }
 
@@ -51,7 +51,7 @@ class Ffuenf_FixCatalogOptionSort_Model_Resource_Product_Type_Configurable_Attri
             $query = $this->getConnection()->query($select);
 
             while ($row = $query->fetch()) {
-                $pricings[(int)$row['website_id']][] = $row;
+                $pricings[(int) $row['website_id']][] = $row;
             }
 
             $values = array();
@@ -117,22 +117,22 @@ class Ffuenf_FixCatalogOptionSort_Model_Resource_Product_Type_Configurable_Attri
             }
 
             /**
-            * Mage 1.9+ fix for configurable attribute options not sorting to position
-            * @author Harshit <support@cubixws.co.uk>
-            */
-            if (Mage::getStoreConfig('ffuenf_fixcatalogoptionsort/general/enabled')) {
-                $sortOrder = 1;
-                foreach ($this->_items as $item) {
-                    $productAttribute = $item->getProductAttribute();
-                    if (!($productAttribute instanceof Mage_Eav_Model_Entity_Attribute_Abstract)) {
+             * Mage 1.9+ fix for configurable attribute options not sorting to position
+             * @author Harshit <support@cubixws.co.uk>
+             */
+            $sortOrder = 1;
+            foreach ($this->_items as $item) {
+                $productAttribute = $item->getProductAttribute();
+                if (!($productAttribute instanceof Mage_Eav_Model_Entity_Attribute_Abstract)) {
+                    continue;
+                }
+                $options = $productAttribute->getFrontend()->getSelectOptions();
+                foreach ($options as $option) {
+                    if (!$option['value']) {
                         continue;
                     }
-                    $options = $productAttribute->getFrontend()->getSelectOptions();
-                    foreach ($options as $option) {
-                        if (!$option['value']) continue;
-                        if (isset($values[$item->getId() . ':' . $option['value']])) {
-                            $values[$item->getId() . ':' . $option['value']]['order'] = $sortOrder++;
-                        }
+                    if (isset($values[$item->getId() . ':' . $option['value']])) {
+                        $values[$item->getId() . ':' . $option['value']]['order'] = $sortOrder++;
                     }
                 }
                 usort($values, function($a, $b) {
