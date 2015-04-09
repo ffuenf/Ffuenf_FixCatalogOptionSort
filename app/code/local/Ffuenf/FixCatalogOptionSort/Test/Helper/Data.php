@@ -18,17 +18,17 @@
 
 class Ffuenf_FixCatalogOptionSort_Test_Helper_Data extends EcomDev_PHPUnit_Test_Case
 {
-  /**
-  * Tests is extension active
-  *
-  * @test
-  * @loadFixture
-  */
-  public function testIsExtensionActive()
-  {
+    /**
+     * Tests is extension active
+     *
+     * @test
+     * @loadFixture
+     */
+    public function testIsExtensionActive()
+    {
     $this->assertTrue(
-      Mage::helper('ffuenf_fixcatalogoptionsort')->isExtensionActive(),
-      'Extension is not active please check config'
+        Mage::helper('ffuenf_fixcatalogoptionsort')->isExtensionActive(),
+        'Extension is not active please check config'
     );
-  }
+    }
 }

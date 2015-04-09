@@ -18,28 +18,28 @@
 
 class Ffuenf_FixCatalogOptionSort_Helper_Data extends Mage_Core_Helper_Abstract {
 
-  /**
-  * Path for the config for extension active status
-  */
-  const CONFIG_EXTENSION_ACTIVE = 'ffuenf_fixcatalogoptionsort/general/enabled';
+    /**
+     * Path for the config for extension active status
+     */
+    const CONFIG_EXTENSION_ACTIVE = 'ffuenf_fixcatalogoptionsort/general/enabled';
 
-  /**
-  * Variable for if the extension is active
-  *
-  * @var bool
-  */
-  protected $bExtensionActive;
+    /**
+     * Variable for if the extension is active
+     *
+     * @var bool
+     */
+    protected $bExtensionActive;
 
-  /**
-  * Check to see if the extension is active
-  *
-  * @return bool
-  */
-  public function isExtensionActive()
-  {
+    /**
+     * Check to see if the extension is active
+     *
+     * @return bool
+     */
+    public function isExtensionActive()
+    {
     if ($this->bExtensionActive === null) {
-      $this->bExtensionActive = Mage::getStoreConfigFlag(self::CONFIG_EXTENSION_ACTIVE);
+        $this->bExtensionActive = Mage::getStoreConfigFlag(self::CONFIG_EXTENSION_ACTIVE);
     }
     return $this->bExtensionActive;
-  }
+    }
 }
