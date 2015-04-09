@@ -1,0 +1,28 @@
+{
+  "name": "Ffuenf/Ffuenf_FixCatalogOptionSort",
+  "license": "OSL-3.0",
+  "description": "Magento 1.9.1.0 has a bug in that the configurable options are sorted by ID rather than position for the Configurable Product's front end view script.",
+  "authors": [
+    {
+      "name": "Achim Rosenhagen",
+      "email": "a.rosenhagen@ffuenf.de"
+    }
+  ],
+  "type": "magento-module",
+  "require": {
+    "magento-hackathon/magento-composer-installer": "*",
+    "colinmollenhour/modman": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "3.7.*"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "http://packages.firegento.com"
+    }
+  ],
+  "extra": {
+    "magento-root-dir": "./magento/"
+  }
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Ffuenf_FixCatalogOptionSort>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Ffuenf_FixCatalogOptionSort>
+    </modules>
+</config>
