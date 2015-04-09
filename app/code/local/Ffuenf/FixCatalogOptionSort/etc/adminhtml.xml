@@ -18,10 +18,23 @@
 */
 -->
 <config>
-    <modules>
-        <Ffuenf_FixCatalogOptionSort>
-            <active>true</active>
-            <codePool>local</codePool>
-        </Ffuenf_FixCatalogOptionSort>
-    </modules>
+  <acl>
+    <resources>
+      <admin>
+        <children>
+          <system>
+            <children>
+              <config>
+                <children>
+                  <ffuenf_fixcatalogoptionsort translate="title" module="ffuenf_fixcatalogoptionsort">
+                    <title>FixCatalogOptionSort Module</title>
+                  </ffuenf_fixcatalogoptionsort>
+                </children>
+              </config>
+            </children>
+          </system>
+        </children>
+      </admin>
+    </resources>
+  </acl>
 </config>

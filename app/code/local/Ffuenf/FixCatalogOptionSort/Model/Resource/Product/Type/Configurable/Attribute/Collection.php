@@ -1,9 +1,21 @@
 <?php
 /**
-* Magento 1.9.1.0 has a bug in that the configurable options are sorted by
-* ID rather than position for the Configurable Product's front end view script.
-* This extension addresses this problem.
+* Magento
+*
+* NOTICE OF LICENSE
+*
+* This source file is subject to the Open Software License (OSL 3.0)
+* that is bundled with this package in the file LICENSE.txt.
+* It is also available through the world-wide-web at this URL:
+* http://opensource.org/licenses/osl-3.0.php
+*
+* @category    Ffuenf
+* @package     Ffuenf_FixCatalogOptionSort
+* @author      Achim Rosenhagen <a.rosenhagen@ffuenf.de>
+* @copyright   Copyright (c) 2015 ffuenf (http://www.ffuenf.de)
+* @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
 */
+
 class Ffuenf_FixCatalogOptionSort_Model_Resource_Product_Type_Configurable_Attribute_Collection extends Mage_Catalog_Model_Resource_Product_Type_Configurable_Attribute_Collection
 {
 
@@ -108,23 +120,25 @@ class Ffuenf_FixCatalogOptionSort_Model_Resource_Product_Type_Configurable_Attri
             * Mage 1.9+ fix for configurable attribute options not sorting to position
             * @author Harshit <support@cubixws.co.uk>
             */
-            $sortOrder = 1;
-            foreach ($this->_items as $item) {
-                $productAttribute = $item->getProductAttribute();
-                if (!($productAttribute instanceof Mage_Eav_Model_Entity_Attribute_Abstract)) {
-                    continue;
-                }
-                $options = $productAttribute->getFrontend()->getSelectOptions();
-                foreach ($options as $option) {
-                    if (!$option['value']) continue;
-                    if (isset($values[$item->getId() . ':' . $option['value']])) {
-                        $values[$item->getId() . ':' . $option['value']]['order'] = $sortOrder++;
+            if (Mage::getStoreConfig('ffuenf_fixcatalogoptionsort/general/enabled')) {
+                $sortOrder = 1;
+                foreach ($this->_items as $item) {
+                    $productAttribute = $item->getProductAttribute();
+                    if (!($productAttribute instanceof Mage_Eav_Model_Entity_Attribute_Abstract)) {
+                        continue;
+                    }
+                    $options = $productAttribute->getFrontend()->getSelectOptions();
+                    foreach ($options as $option) {
+                        if (!$option['value']) continue;
+                        if (isset($values[$item->getId() . ':' . $option['value']])) {
+                            $values[$item->getId() . ':' . $option['value']]['order'] = $sortOrder++;
+                        }
                     }
                 }
+                usort($values, function($a, $b) {
+                    return $a['order'] - $b['order'];
+                });
             }
-            usort($values, function($a, $b) {
-                return $a['order'] - $b['order'];
-            });
 
             foreach ($values as $data) {
                 $this->getItemById($data['product_super_attribute_id'])->addPrice($data);

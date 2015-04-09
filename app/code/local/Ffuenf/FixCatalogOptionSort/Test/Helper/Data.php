@@ -1,5 +1,4 @@
-<?xml version="1.0"?>
-<!--
+<?php
 /**
 * Magento
 *
@@ -16,12 +15,20 @@
 * @copyright   Copyright (c) 2015 ffuenf (http://www.ffuenf.de)
 * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
 */
--->
-<config>
-    <modules>
-        <Ffuenf_FixCatalogOptionSort>
-            <active>true</active>
-            <codePool>local</codePool>
-        </Ffuenf_FixCatalogOptionSort>
-    </modules>
-</config>
+
+class Ffuenf_FixCatalogOptionSort_Test_Helper_Data extends EcomDev_PHPUnit_Test_Case
+{
+  /**
+  * Tests is extension active
+  *
+  * @test
+  * @loadFixture
+  */
+  public function testIsExtensionActive()
+  {
+    $this->assertTrue(
+      Mage::helper('ffuenf_fixcatalogoptionsort')->isExtensionActive(),
+      'Extension is not active please check config'
+    );
+  }
+}
