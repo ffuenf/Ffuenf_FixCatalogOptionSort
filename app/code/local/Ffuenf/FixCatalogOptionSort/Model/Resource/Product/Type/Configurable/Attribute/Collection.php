@@ -16,7 +16,6 @@
  * @license    http://opensource.org/licenses/mit-license.php MIT License
 */
 
-namespace Ffuenf\FixCatalogOptionSort;
 class Ffuenf_FixCatalogOptionSort_Model_Resource_Product_Type_Configurable_Attribute_Collection extends Mage_Catalog_Model_Resource_Product_Type_Configurable_Attribute_Collection
 {
 
@@ -36,7 +35,7 @@ class Ffuenf_FixCatalogOptionSort_Model_Resource_Product_Type_Configurable_Attri
                 $websiteId = 0;
             } else {
                 $websiteId = (int) Mage::app()->getStore($this->getStoreId())->getWebsiteId();
-                $pricing[$websiteId] = array();
+                $pricings[$websiteId] = array();
             }
 
             $select = $this->getConnection()->select()

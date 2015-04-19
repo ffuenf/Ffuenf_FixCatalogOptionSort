@@ -26,9 +26,9 @@ class Ffuenf_FixCatalogOptionSort_Test_Helper_Data extends EcomDev_PHPUnit_Test_
      */
     public function testIsExtensionActive()
     {
-    $this->assertTrue(
-        Mage::helper('ffuenf_fixcatalogoptionsort')->isExtensionActive(),
-        'Extension is not active please check config'
-    );
+        $this->assertTrue(
+            Mage::helper('ffuenf_fixcatalogoptionsort')->isExtensionActive(),
+            'Extension is not active please check config'
+        );
     }
 }

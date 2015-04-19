@@ -16,7 +16,6 @@
  * @license    http://opensource.org/licenses/mit-license.php MIT License
 */
 
-namespace Ffuenf\FixCatalogOptionSort;
 class Ffuenf_FixCatalogOptionSort_Helper_Data extends Mage_Core_Helper_Abstract {
 
     /**

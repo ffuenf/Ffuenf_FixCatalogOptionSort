@@ -36,6 +36,13 @@
                 </rewrite>
             </catalog_resource>
         </models>
+        <resources>
+            <fixcatalogoptionsort_setup>
+                <setup>
+                    <module>Ffuenf_FixCatalogOptionSort</module>
+                </setup>
+            </fixcatalogoptionsort_setup>
+        </resources>
     </global>
     <default>
       <fixcatalogoptionsort>
