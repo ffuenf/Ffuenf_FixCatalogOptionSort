@@ -1,40 +1,43 @@
 <?xml version="1.0"?>
 <!--
 /**
-* Magento
-*
-* NOTICE OF LICENSE
-*
-* This source file is subject to the Open Software License (OSL 3.0)
-* that is bundled with this package in the file LICENSE.txt.
-* It is also available through the world-wide-web at this URL:
-* http://opensource.org/licenses/osl-3.0.php
-*
-* @category    Ffuenf
-* @package     Ffuenf_FixCatalogOptionSort
-* @author      Achim Rosenhagen <a.rosenhagen@ffuenf.de>
-* @copyright   Copyright (c) 2015 ffuenf (http://www.ffuenf.de)
-* @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * Ffuenf_FixCatalogOptionSort extension
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ * 
+ * @category   Ffuenf
+ * @package    Ffuenf_FixCatalogOptionSort
+ * @author     Achim Rosenhagen <a.rosenhagen@ffuenf.de>
+ * @copyright  Copyright (c) 2015 ffuenf (http://www.ffuenf.de)
+ * @license    http://opensource.org/licenses/mit-license.php MIT License
 */
 -->
 <config>
-  <acl>
-    <resources>
-      <admin>
-        <children>
-          <system>
-            <children>
-              <config>
+    <acl>
+        <resources>
+            <all>
+                <title>Allow Everything</title>
+            </all>
+            <admin>
                 <children>
-                  <ffuenf_fixcatalogoptionsort translate="title" module="ffuenf_fixcatalogoptionsort">
-                    <title>FixCatalogOptionSort Module</title>
-                  </ffuenf_fixcatalogoptionsort>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <fixcatalogoptionsort translate="title" module="ffuenf_fixcatalogoptionsort">
+                                        <title>FixCatalogOptionSort Module</title>
+                                    </fixcatalogoptionsort>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
                 </children>
-              </config>
-            </children>
-          </system>
-        </children>
-      </admin>
-    </resources>
-  </acl>
+            </admin>
+        </resources>
+    </acl>
 </config>
