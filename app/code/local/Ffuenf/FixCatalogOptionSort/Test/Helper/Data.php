@@ -16,13 +16,18 @@
  * @license    http://opensource.org/licenses/mit-license.php MIT License
 */
 
+/**
+ * @see Ffuenf_FixCatalogOptionSort_Helper_Data
+ *
+ * @loadSharedFixture shared
+ */
 class Ffuenf_FixCatalogOptionSort_Test_Helper_Data extends EcomDev_PHPUnit_Test_Case
 {
     /**
      * Tests is extension active
      *
      * @test
-     * @loadFixture
+     * @covers Ffuenf_FixCatalogOptionSort_Helper_Data::isExtensionActive
      */
     public function testIsExtensionActive()
     {

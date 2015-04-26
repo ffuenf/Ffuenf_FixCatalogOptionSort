@@ -47,7 +47,7 @@
     <default>
       <fixcatalogoptionsort>
         <general>
-          <enabled>1</enabled>
+          <enabled>0</enabled>
         </general>
       </fixcatalogoptionsort>
     </default>
