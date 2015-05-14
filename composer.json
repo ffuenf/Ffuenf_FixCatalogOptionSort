@@ -1,7 +1,7 @@
 {
   "name": "Ffuenf/Ffuenf_FixCatalogOptionSort",
   "license": "MIT",
-  "description": "Magento 1.9.1.0 has a bug in that the configurable options are sorted by ID rather than position for the Configurable Product's front end view script.",
+  "description": "Magento 1.9.* has a bug in that the configurable options are sorted by ID rather than position for the Configurable Product's front end view script.",
   "authors": [
     {
       "name": "Achim Rosenhagen",

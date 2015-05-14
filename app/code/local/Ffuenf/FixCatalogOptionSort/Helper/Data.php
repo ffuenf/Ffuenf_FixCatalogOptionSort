@@ -37,9 +37,9 @@ class Ffuenf_FixCatalogOptionSort_Helper_Data extends Mage_Core_Helper_Abstract 
      */
     public function isExtensionActive()
     {
-    if ($this->bExtensionActive === null) {
-        $this->bExtensionActive = Mage::getStoreConfigFlag(self::CONFIG_EXTENSION_ACTIVE);
-    }
-    return $this->bExtensionActive;
+        if ($this->bExtensionActive === null) {
+            $this->bExtensionActive = $this->getStoreFlag(self::CONFIG_EXTENSION_ACTIVE, 'bExtensionActive');
+        }
+        return $this->bExtensionActive;
     }
 }
