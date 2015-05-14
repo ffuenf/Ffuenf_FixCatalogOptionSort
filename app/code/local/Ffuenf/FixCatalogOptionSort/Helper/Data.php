@@ -16,7 +16,7 @@
  * @license    http://opensource.org/licenses/mit-license.php MIT License
 */
 
-class Ffuenf_FixCatalogOptionSort_Helper_Data extends Mage_Core_Helper_Abstract {
+class Ffuenf_FixCatalogOptionSort_Helper_Data extends Ffuenf_FixCatalogOptionSort_Helper_Core {
 
     /**
      * Path for the config for extension active status
