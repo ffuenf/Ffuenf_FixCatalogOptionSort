@@ -2,13 +2,15 @@ Ffuenf_FixCatalogOptionSort
 ===========================
 [![GitHub tag](https://img.shields.io/github/tag/ffuenf/Ffuenf_FixCatalogOptionSort.svg)][tag]
 [![Build Status](https://img.shields.io/travis/ffuenf/Ffuenf_FixCatalogOptionSort.svg)][travis]
+[![Code Quality](https://scrutinizer-ci.com/g/ffuenf/Ffuenf_FixCatalogOptionSort/badges/quality-score.png)][code_quality]
+[![Code Coverage](https://scrutinizer-ci.com/g/ffuenf/Ffuenf_FixCatalogOptionSort/badges/coverage.png)][code_coverage]
 [![Code Climate](https://codeclimate.com/github/ffuenf/Ffuenf_FixCatalogOptionSort/badges/gpa.svg)][codeclimate_gpa]
-[![Test Coverage](https://codeclimate.com/github/ffuenf/Ffuenf_FixCatalogOptionSort/badges/coverage.svg)][codeclimate_coverage]
 
 [tag]: https://github.com/ffuenf/Ffuenf_FixCatalogOptionSort
 [travis]: https://travis-ci.org/ffuenf/Ffuenf_FixCatalogOptionSort
+[code_quality]: https://scrutinizer-ci.com/g/ffuenf/Ffuenf_FixCatalogOptionSort
+[code_coverage]: https://scrutinizer-ci.com/g/ffuenf/Ffuenf_FixCatalogOptionSort
 [codeclimate_gpa]: https://codeclimate.com/github/ffuenf/Ffuenf_FixCatalogOptionSort
-[codeclimate_coverage]: https://codeclimate.com/github/ffuenf/Ffuenf_FixCatalogOptionSort
 
 Magento 1.9.1.0 has a bug in that the configurable options are sorted by ID rather than position for the Configurable Product's front end view script.
 This extension addresses this problem.
