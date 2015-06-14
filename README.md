@@ -5,12 +5,14 @@ Ffuenf_FixCatalogOptionSort
 [![Code Quality](https://scrutinizer-ci.com/g/ffuenf/Ffuenf_FixCatalogOptionSort/badges/quality-score.png)][code_quality]
 [![Code Coverage](https://scrutinizer-ci.com/g/ffuenf/Ffuenf_FixCatalogOptionSort/badges/coverage.png)][code_coverage]
 [![Code Climate](https://codeclimate.com/github/ffuenf/Ffuenf_FixCatalogOptionSort/badges/gpa.svg)][codeclimate_gpa]
+[![PayPal Donate](https://img.shields.io/badge/paypal-donate-blue.svg)][paypal_donate]
 
 [tag]: https://github.com/ffuenf/Ffuenf_FixCatalogOptionSort
 [travis]: https://travis-ci.org/ffuenf/Ffuenf_FixCatalogOptionSort
 [code_quality]: https://scrutinizer-ci.com/g/ffuenf/Ffuenf_FixCatalogOptionSort
 [code_coverage]: https://scrutinizer-ci.com/g/ffuenf/Ffuenf_FixCatalogOptionSort
 [codeclimate_gpa]: https://codeclimate.com/github/ffuenf/Ffuenf_FixCatalogOptionSort
+[paypal_donate]: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=J2PQS2WLT2Y8W&item_name=Magento%20Extension%3a%20Ffuenf_FixCatalogOptionSort&item_number=Ffuenf_FixCatalogOptionSort&currency_code=EUR
 
 Magento 1.9.1.0 has a bug in that the configurable options are sorted by ID rather than position for the Configurable Product's front end view script.
 This extension addresses this problem.
