@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of Ffuenf_FixCatalogOptionSort.
 
+## 1.0.2:
+
+* add hint to affected versions
+
 ## 1.0.1:
 
 * remove composer dependencies

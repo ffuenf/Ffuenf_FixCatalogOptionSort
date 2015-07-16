@@ -14,8 +14,16 @@ Ffuenf_FixCatalogOptionSort
 [codeclimate_gpa]: https://codeclimate.com/github/ffuenf/Ffuenf_FixCatalogOptionSort
 [paypal_donate]: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=J2PQS2WLT2Y8W&item_name=Magento%20Extension%3a%20Ffuenf_FixCatalogOptionSort&item_number=Ffuenf_FixCatalogOptionSort&currency_code=EUR
 
-Magento 1.9.1.0 has a bug in that the configurable options are sorted by ID rather than position for the Configurable Product's front end view script.
+Magento 1.9.x has a bug in that the configurable options are sorted by ID rather than position for the Configurable Product's front end view script.
 This extension addresses this problem.
+
+Affected versions
+-----------------
+
+Magento CE 1.9.0.0
+Magento CE 1.9.1.0
+Magento CE 1.9.1.1
+Magento CE 1.9.2.0
 
 Installation
 ------------
