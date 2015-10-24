@@ -13,7 +13,7 @@ env:
   matrix:
   - MAGENTO_VERSION=magento-mirror-1.9.2.1
   - MAGENTO_VERSION=magento-ce-1.9.1.1
-  - MAGENTO_VERSION=magento-ce-1.9.0.0
+  - MAGENTO_VERSION=magento-ce-1.9.0.1
   global:
     secure: bUjUs1Wto+KI81pPYBI0r5kt5xnHqQDjEYxpcyZCfBX8JRcipd6DbCk3yndkIydYpH68BsOTsNwK76LLwNX2RVaoHUrEnHILzx5lHUChOlmBQ3Lz1gUP4EXidwDK5lIqq649PBEmcZhCy1WwFYLCs062S3ncxUxgz2/r5kiFtPw=
 script:
