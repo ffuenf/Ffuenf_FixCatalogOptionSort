@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of Ffuenf_FixCatalogOptionSort.
 
+## 1.0.3:
+
+* add test whether extension uses the old-style admin routing.
+
 ## 1.0.2:
 
 * add hint to affected versions
