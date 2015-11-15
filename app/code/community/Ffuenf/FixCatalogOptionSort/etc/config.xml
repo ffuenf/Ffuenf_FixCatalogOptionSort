@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<!--
+/**
+* Ffuenf_FixCatalogOptionSort extension
+*
+* NOTICE OF LICENSE
+*
+* This source file is subject to the MIT License
+* that is bundled with this package in the file LICENSE.txt.
+* It is also available through the world-wide-web at this URL:
+* http://opensource.org/licenses/mit-license.php
+*
+* @category   Ffuenf
+*
+* @author     Achim Rosenhagen <a.rosenhagen@ffuenf.de>
+* @copyright  Copyright (c) 2015 ffuenf (http://www.ffuenf.de)
+* @license    http://opensource.org/licenses/mit-license.php MIT License
+*/
+-->
+<config>
+    <modules>
+        <Ffuenf_FixCatalogOptionSort>
+            <version>1.0.4</version>
+        </Ffuenf_FixCatalogOptionSort>
+    </modules>
+    <global>
+        <helpers>
+            <ffuenf_fixcatalogoptionsort>
+                <class>Ffuenf_FixCatalogOptionSort_Helper</class>
+            </ffuenf_fixcatalogoptionsort>
+        </helpers>
+        <blocks>
+            <ffuenf_fixcatalogoptionsort>
+                <class>Ffuenf_FixCatalogOptionSort_Block</class>
+            </ffuenf_fixcatalogoptionsort>
+        </blocks>
+        <models>
+            <catalog_resource>
+                <rewrite>
+                    <product_type_configurable_attribute_collection>Ffuenf_FixCatalogOptionSort_Model_Resource_Product_Type_Configurable_Attribute_Collection</product_type_configurable_attribute_collection>
+                </rewrite>
+            </catalog_resource>
+        </models>
+        <resources>
+            <fixcatalogoptionsort_setup>
+                <setup>
+                    <module>Ffuenf_FixCatalogOptionSort</module>
+                </setup>
+            </fixcatalogoptionsort_setup>
+        </resources>
+    </global>
+    <default>
+        <fixcatalogoptionsort>
+            <general>
+                <enabled>0</enabled>
+            </general>
+        </fixcatalogoptionsort>
+    </default>
+    <phpunit>
+        <suite>
+            <modules>
+                <Ffuenf_FixCatalogOptionSort/>
+            </modules>
+        </suite>
+    </phpunit>
+</config>

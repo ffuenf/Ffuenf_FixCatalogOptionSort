@@ -30,7 +30,7 @@
                             <config>
                                 <children>
                                     <fixcatalogoptionsort translate="title" module="ffuenf_fixcatalogoptionsort">
-                                        <title>FixCatalogOptionSort Module</title>
+                                        <title>FixCatalogOptionSort</title>
                                     </fixcatalogoptionsort>
                                 </children>
                             </config>

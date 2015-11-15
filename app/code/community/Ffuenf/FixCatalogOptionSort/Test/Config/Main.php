@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Ffuenf_FixCatalogOptionSort extension.
  *
@@ -17,22 +16,31 @@
  * @license    http://opensource.org/licenses/mit-license.php MIT License
  */
 
-/**
- * @see Ffuenf_FixCatalogOptionSort_Helper_Data
- *
- * @loadSharedFixture shared
- */
-class Ffuenf_FixCatalogOptionSort_Test_Helper_Data extends EcomDev_PHPUnit_Test_Case
+class Ffuenf_FixCatalogOptionSort_Test_Config_Main extends EcomDev_PHPUnit_Test_Case_Config
 {
     /**
-     * Tests is extension active.
+     * Check if the installed module has the correct module version
      *
      * @test
-     * @covers Ffuenf_FixCatalogOptionSort_Helper_Data::isExtensionActive
      */
-    public function testIsExtensionActive()
+    public function testModuleConfig()
     {
-        $this->assertTrue(Mage::helper('ffuenf_fixcatalogoptionsort')->isExtensionActive(), 'Extension is not active please check config');
+        $this->assertModuleVersionGreaterThanOrEquals($this->expected('module')->getVersion(), 'module is new enough');
+        $this->assertModuleCodePool($this->expected('module')->getCodePool(), 'correct module code pool');
+        $this->assertModuleIsActive('module is active');
+    }
+
+    /**
+     * Tests whether extension helper aliases are returning the correct class names
+     *
+     * @test
+     */
+    public function testHelperAliases()
+    {
+        $this->assertHelperAlias(
+            'ffuenf_fixcatalogoptionsort',
+            'Ffuenf_FixCatalogOptionSort_Helper_Data'
+        );
     }
 
     /**

@@ -1,3 +1,5 @@
+<a href="http://www.ffuenf.de" title="ffuenf - code • design • e-commerce"><img src="https://github.com/ffuenf/Ffuenf_Common/blob/master/skin/adminhtml/default/default/ffuenf/ffuenf.png" alt="ffuenf - code • design • e-commerce" /></a>
+
 Ffuenf_FixCatalogOptionSort
 ===========================
 [![GitHub tag](https://img.shields.io/github/tag/ffuenf/Ffuenf_FixCatalogOptionSort.svg)][tag]
@@ -6,7 +8,6 @@ Ffuenf_FixCatalogOptionSort
 [![Code Coverage](https://scrutinizer-ci.com/g/ffuenf/Ffuenf_FixCatalogOptionSort/badges/coverage.png)][code_coverage]
 [![Code Climate](https://codeclimate.com/github/ffuenf/Ffuenf_FixCatalogOptionSort/badges/gpa.svg)][codeclimate_gpa]
 [![PayPal Donate](https://img.shields.io/badge/paypal-donate-blue.svg)][paypal_donate]
-
 [tag]: https://github.com/ffuenf/Ffuenf_FixCatalogOptionSort
 [travis]: https://travis-ci.org/ffuenf/Ffuenf_FixCatalogOptionSort
 [code_quality]: https://scrutinizer-ci.com/g/ffuenf/Ffuenf_FixCatalogOptionSort
@@ -20,10 +21,24 @@ This extension addresses this problem.
 Affected versions
 -----------------
 
-Magento CE 1.9.0.0
-Magento CE 1.9.1.0
-Magento CE 1.9.1.1
+Magento CE 1.9.2.2
+Magento CE 1.9.2.1
 Magento CE 1.9.2.0
+Magento CE 1.9.1.1
+Magento CE 1.9.1.0
+Magento CE 1.9.0.0
+
+Requirements
+------------
+
+|                                                                     | PHP 5.3        | PHP 5.4        | PHP 5.5           | PHP 5.6       | PHP 7.0       |
+| ------------------------------------------------------------------- | -------------- | -------------- | ----------------- | ------------- | ------------- |
+| [EOL](https://secure.php.net/supported-versions.php) / STABLE / RC  | EOL            | EOL            | STABLE            | **STABLE**    | RC            |
+| automated tests on [travis]                                         | allow failure  | allow failure  | **required pass** | allow failure | allow failure |
+
+Magento Community Edition officially supports PHP 5.4 and PHP 5.5.
+
+Non-official compatibility to PHP 5.6 may be reached by following the tips on [Use of iconv.internal_encoding is deprecated](https://magento.stackexchange.com/questions/34015/magento-1-9-php-5-6-use-of-iconv-internal-encoding-is-deprecated).
 
 Installation
 ------------
@@ -31,6 +46,7 @@ Installation
 Use [modman](https://github.com/colinmollenhour/modman) to install:
 ```
 modman init
+modman clone https://github.com/ffuenf/Ffuenf_Common
 modman clone https://github.com/ffuenf/Ffuenf_FixCatalogOptionSort
 ```
 
