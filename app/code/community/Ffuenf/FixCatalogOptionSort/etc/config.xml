@@ -20,7 +20,7 @@
 <config>
     <modules>
         <Ffuenf_FixCatalogOptionSort>
-            <version>1.0.4</version>
+            <version>1.0.5</version>
         </Ffuenf_FixCatalogOptionSort>
     </modules>
     <global>
@@ -42,11 +42,11 @@
             </catalog_resource>
         </models>
         <resources>
-            <fixcatalogoptionsort_setup>
+            <ffuenf_fixcatalogoptionsort_setup>
                 <setup>
                     <module>Ffuenf_FixCatalogOptionSort</module>
                 </setup>
-            </fixcatalogoptionsort_setup>
+            </ffuenf_fixcatalogoptionsort_setup>
         </resources>
     </global>
     <default>
@@ -56,6 +56,9 @@
             </general>
         </fixcatalogoptionsort>
     </default>
+    <uninstall>
+        <filename>uninstall.txt</filename>
+    </uninstall>
     <phpunit>
         <suite>
             <modules>
