@@ -6,13 +6,11 @@ Ffuenf_FixCatalogOptionSort
 [![Build Status](https://img.shields.io/travis/ffuenf/Ffuenf_FixCatalogOptionSort.svg)][travis]
 [![Code Quality](https://scrutinizer-ci.com/g/ffuenf/Ffuenf_FixCatalogOptionSort/badges/quality-score.png)][code_quality]
 [![Code Coverage](https://scrutinizer-ci.com/g/ffuenf/Ffuenf_FixCatalogOptionSort/badges/coverage.png)][code_coverage]
-[![Code Climate](https://codeclimate.com/github/ffuenf/Ffuenf_FixCatalogOptionSort/badges/gpa.svg)][codeclimate_gpa]
 [![PayPal Donate](https://img.shields.io/badge/paypal-donate-blue.svg)][paypal_donate]
 [tag]: https://github.com/ffuenf/Ffuenf_FixCatalogOptionSort
 [travis]: https://travis-ci.org/ffuenf/Ffuenf_FixCatalogOptionSort
 [code_quality]: https://scrutinizer-ci.com/g/ffuenf/Ffuenf_FixCatalogOptionSort
 [code_coverage]: https://scrutinizer-ci.com/g/ffuenf/Ffuenf_FixCatalogOptionSort
-[codeclimate_gpa]: https://codeclimate.com/github/ffuenf/Ffuenf_FixCatalogOptionSort
 [paypal_donate]: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=J2PQS2WLT2Y8W&item_name=Magento%20Extension%3a%20Ffuenf_FixCatalogOptionSort&item_number=Ffuenf_FixCatalogOptionSort&currency_code=EUR
 
 Magento 1.9.x has a bug in that the configurable options are sorted by ID rather than position for the Configurable Product's front end view script.
@@ -33,12 +31,13 @@ Requirements
 
 |                                                                     | PHP 5.3        | PHP 5.4        | PHP 5.5           | PHP 5.6       | PHP 7.0       |
 | ------------------------------------------------------------------- | -------------- | -------------- | ----------------- | ------------- | ------------- |
-| [EOL](https://secure.php.net/supported-versions.php) / STABLE / RC  | EOL            | EOL            | STABLE            | **STABLE**    | RC            |
+| [EOL](https://secure.php.net/supported-versions.php) / STABLE / RC  | EOL            | EOL            | STABLE            | **STABLE**    | STABLE        |
 | automated tests on [travis]                                         | allow failure  | allow failure  | **required pass** | allow failure | allow failure |
 
 Magento Community Edition officially supports PHP 5.4 and PHP 5.5.
 
 Non-official compatibility to PHP 5.6 may be reached by following the tips on [Use of iconv.internal_encoding is deprecated](https://magento.stackexchange.com/questions/34015/magento-1-9-php-5-6-use-of-iconv-internal-encoding-is-deprecated).
+Non-official compatibility to PHP 7.0 may be reached by following the tips on [Is Magento ready for PHP 7?](https://magento.stackexchange.com/questions/74008/is-magento-ready-for-php-7).
 
 Installation
 ------------
