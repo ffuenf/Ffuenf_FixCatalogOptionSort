@@ -2,7 +2,11 @@
 
 This file is used to list changes made in each version of Ffuenf_FixCatalogOptionSort.
 
-## 1.0.6 (Unreleased)
+## 1.1.0 (December 20, 2015)
+
+* fix dependency declaration to Ffuenf_Common
+* code-style
+* update travis build-matrix
 
 ## 1.0.5 (November 22, 2015)
 
